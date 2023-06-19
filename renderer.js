@@ -7,9 +7,42 @@
  */
 document.addEventListener('DOMContentLoaded', () => {
   const btnOptimizeDiscord = document.getElementById('btnOptimizeDiscord');
+  const NettoyagePC = document.getElementById('NettoyagePC');
+  const InstallerSpotify = document.getElementById('InstallerSpotify');
+  const OneDrive = document.getElementById('OneDrive');
+  const Repair = document.getElementById('Repair');
+  const NVIDIA = document.getElementById('NVIDIA');
+  const Edge = document.getElementById('Edge');
   // Ajoutez les autres boutons ici
 
   btnOptimizeDiscord.addEventListener('click', () => {
     window.electronAPI.optimizeDiscord();
+  });
+  NettoyagePC.addEventListener('click', () => {
+    window.electronAPI.NettoyagePC();
+  });
+
+  InstallerSpotify.addEventListener('click', () => {
+    window.electronAPI.InstallerSpotify();
+  });
+
+  OneDrive.addEventListener('click', () => {
+    window.electronAPI.OneDrive();
+  });
+
+  Repair.addEventListener('click', () => {
+    window.electronAPI.Repair();
+  });
+
+  NVIDIA.addEventListener('click', () => {
+    window.electronAPI.NVIDIA();
+  });
+  
+  Edge.addEventListener('click', () => {
+    window.electronAPI.Edge();
+  });
+
+  Reappliqueroptimisation.addEventListener('click', () => {
+    window.electronAPI.Reappliqueroptimisation();
   });
 });

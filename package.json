@@ -1,10 +1,11 @@
 {
-  "name": "electron-quick-start",
+  "name": "opti-kboudini",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Application de tweak pour l'opti de kboudini",
   "main": "main.js",
   "scripts": {
-    "start": "electron ." 
+    "start": "electron .",
+    "dist": "electron-builder"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -14,9 +15,25 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "Kboudini",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^25.1.0"
+    "electron": "^25.1.0",
+    "electron-builder": "^24.4.0"
+  },
+  "build": {
+    "appId": "com.tweakkboudini.app",
+    "productName": "Tweaks kboudini",
+    "target": "NSIS",
+    "directories": {
+      "output": "build"
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    },
+    "win": {
+      "icon": "./img.png"
+    }
   }
 }

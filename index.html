@@ -1,25 +1,132 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
-    <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <button id="btnOptimizeDiscord">Optimiser Discord</button>
-    <!-- Ajoutez les autres boutons ici -->
-  
-    <script src="renderer.js"></script>
-  </body>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+<head>
+  <meta charset="UTF-8">
+  <title>Optimisation kboudini | Tweaks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    /* Styles CSS */
+    body {
+      background-color: #222;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      margin-bottom: 8px;
+      margin-right: 8px;
+      width: 180px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #135c9c;
+      cursor: pointer;
+    }
+
+    .btn:active {
+      background-color: #0c436f;
+    }
+
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    #discordLink {
+      color: #337ab7;
+      text-decoration: none;
+      margin-top: auto;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    #discordLink:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    #closeBtn {
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      margin-bottom: 8px;
+      margin-right: 8px;
+      width: 180px;
+      transition: background-color 0.3s;
+    }
+
+    #closeBtn:hover {
+      background-color: #135c9c;
+      cursor: pointer;
+    }
+
+    #closeBtn:active {
+      background-color: #0c436f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Optimisation kboudini</h1>
+    <h2>Tweaks ⚡</h2>
+    <img src="img.png" alt="Logo" class="logo">
+    <div class="btn-row">
+      <button class="btn" id="btnOptimizeDiscord">Optimisation Discord</button>
+      <button class="btn" id="NettoyagePC">Nettoyage PC</button>
+      <button class="btn" id="Reappliqueroptimisation">Réappliquer l'optimisation</button>
+    </div>
+    <div class="btn-row">
+      <button class="btn" id="InstallerSpotify">Installer Spotify</button>
+      <button class="btn" id="OneDrive">Supprimer OneDrive</button>
+      <button class="btn" id="Repair">Réparer Windows</button>
+    </div>
+    <div class="btn-row">
+      <button class="btn" id="NVIDIA">Installer Driver NVIDIA</button>
+      <button class="btn" id="Edge">Supprimer Edge</button>
+      <button class="btn" id="closeBtn">Fermer</button>
+    </div>
+    <div class="btn-row">
+      <!-- Ajoutez d'autres boutons ici -->
+    </div>
+    <a href="https://discord.gg/H85ZRQZ4YW" target="_blank" id="discordLink">Rejoindre notre serveur Discord</a>
+  </div>
+
+  <script>
+    document.getElementById('closeBtn').addEventListener('click', () => {
+      window.close();
+    });
+  </script>
+  <script src="renderer.js"></script>
+</body>
 </html>

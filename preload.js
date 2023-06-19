@@ -14,10 +14,13 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   contextBridge.exposeInMainWorld('electronAPI', {
-    optimizeDiscord: () => ipcRenderer.send('optimize-discord')
+    optimizeDiscord: () => ipcRenderer.send('optimize-discord'),
+    NettoyagePC: () => ipcRenderer.send('NettoyagePC'),
+    InstallerSpotify: () => ipcRenderer.send('InstallerSpotify'),
+    OneDrive: () => ipcRenderer.send('OneDrive'),
+    Repair: () => ipcRenderer.send('Repair'),
+    NVIDIA: () => ipcRenderer.send('NVIDIA'),
+    Edge: () => ipcRenderer.send('Edge'),
+    Reappliqueroptimisation: () => ipcRenderer.send('Reappliqueroptimisation'),
   }) 
-
-  for (const type of ['chrome', 'node', 'electron']) {
-    replaceText(`${type}-version`, process.versions[type])
-  }
 })
